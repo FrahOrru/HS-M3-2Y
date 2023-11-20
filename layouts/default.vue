@@ -1,4 +1,21 @@
+<script setup>
+let loading = ref(true);
+
+onMounted(() => {
+    // setTimeout(() => {
+    //     loading.value = false;
+    // },6000)
+})
+
+</script>
 <template>
-    <Header></Header>
-    <slot />
+    <div>
+        <div v-if="loading">
+            <Loading></Loading>
+        </div>
+        <div v-if="!loading">
+            <Header></Header>
+            <slot />
+        </div>
+    </div>
 </template>
