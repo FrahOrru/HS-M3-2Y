@@ -2,9 +2,9 @@
 let loading = ref(true);
 
 onMounted(() => {
-    // setTimeout(() => {
-    //     loading.value = false;
-    // },6000)
+    setTimeout(() => {
+        loading.value = false;
+    }, 5000)
 })
 
 </script>

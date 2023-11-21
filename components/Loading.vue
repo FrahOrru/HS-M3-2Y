@@ -218,6 +218,7 @@ function onMouseLeave() {
       transparent
     ),
     radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+  overflow: hidden;
 }
 canvas {
   position: fixed;

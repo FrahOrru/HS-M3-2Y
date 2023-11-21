@@ -1,14 +1,5 @@
-<script setup>
-onMounted(() => {
-    setTimeout(() => {
-        document.getElementsByClassName('loader-circle')[1].style.animation = 'loaderAnimation2 6s infinite';
-
-    }, 3000)
-})
-</script>
 <template>
     <div class="loader-container">
-        <div class="loader-circle"></div>
         <div class="loader-circle"></div>
         <div class="loader-circle"></div>
     </div>
@@ -25,7 +16,7 @@ onMounted(() => {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: #ffffff7f;
+        background-color: rgba(255, 255, 255, 0.498);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -33,41 +24,39 @@ onMounted(() => {
     }
 
     .loader-circle:nth-child(1) {
-        width: 40px;
-        height: 40px;
-        animation: loaderAnimation 3s infinite;
-    }
-    .loader-circle:nth-child(2) {
-        width: 40px;
-        height: 40px;
-        /* animation: loaderAnimation2 6s infinite; */
+        width: 20px;
+        height: 20px;
 
+        animation-name: loaderAnimation, loaderAnimationEnd;
+        animation-duration: 2s, 2s;
+        animation-delay: 0s, 4s; 
+        animation-timing-function: ease-in, ease-in;
+        animation-iteration-count: infinite, infinite;
     }
 
     @keyframes loaderAnimation {
-        30% {
-            transform: translate(30px, 5px);
-        }
-        40% {
-            transform: translate(30px, -20px);
+        0%{
+            width: 20px;
+            height: 20px;
         }
         50% {
-            transform: translate(30px, -40px);
+            width: 50px;
+            height: 50px;
         }
-        60% {
-            transform: translate(20px, -50px);
-        }
+        
     }
-
-    @keyframes loaderAnimation2 {
-        40% {
+    @keyframes loaderAnimationEnd {
+        0%{
+            width: 20px;
+            height: 20px;
+            transform: opacity(1);
+            background-color: rgba(255, 255, 255, 1);
 
         }
-        50% {
-            transform: translate(-40px, 20px);
+        100%{
+            width: 300vh;
+            height: 300vh;
+            background-color: rgba(255, 255, 255, 1);
         }
-        100% {
-            /* transform: translate(20px, -40px); */
-        } 
     }
 </style>

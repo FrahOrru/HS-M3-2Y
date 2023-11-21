@@ -1,5 +1,20 @@
 <template>
     <div>
-        <SideOptions></SideOptions>
+        <div class="top-section">
+            <ProfileCard></ProfileCard>
+        </div>
+        <div class="bottom-section">
+            <SideOptions></SideOptions>
+        </div>
     </div>
-  </template>
+</template>
+<style scoped>
+    .bottom-section{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .top-section {
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+</style>

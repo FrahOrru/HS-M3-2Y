@@ -1,1 +1,36 @@
-<template></template>
+<template>
+    <div class="side-options">
+        <div class="side-options-item notifications">
+            <img src="~/assets/img/notification.png" alt="notification icon">
+            <p>Notifications</p>
+        </div>
+        <hr>
+        <div class="side-options-item profile">
+            <img src="~/assets/img/account.png" alt="profile icon">
+            <p>Profile</p>
+        </div>
+    </div>
+</template>
+<style scoped>
+ .side-options {
+    height: 60vh;
+    border-right: 1px solid rgba(150, 150, 150, 0.40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ .side-options-item {
+    margin: 0;
+    height: 3rem;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+ }
+ hr {
+    height: 1px;
+    color: 1px solid rgba(150, 150, 150, 0.40);
+    width: 90%;
+ }
+</style>
