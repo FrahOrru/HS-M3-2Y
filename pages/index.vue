@@ -2,6 +2,7 @@
     <div>
         <div class="top-section">
             <ProfileCard></ProfileCard>
+            <PostInput></PostInput>
         </div>
         <div class="bottom-section">
             <SideOptions></SideOptions>
