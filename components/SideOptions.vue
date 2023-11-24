@@ -36,4 +36,11 @@
     -webkit-backdrop-filter: blur(13.5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
  }
+
+ @media only screen and (max-width: 768px) {
+        .side-options {
+            display: none;
+        }
+        
+    }
 </style>

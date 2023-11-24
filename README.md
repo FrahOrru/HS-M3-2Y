@@ -30,3 +30,9 @@ points:
 5 - Button to change background color (dark and light) colour palette
 
     on the top right there is a button to switch color mode
+
+5 - Responsive on all devices
+
+++ points that i think deserves extra points :)
+
+    - store that manages data through content

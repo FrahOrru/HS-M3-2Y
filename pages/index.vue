@@ -33,4 +33,14 @@
         display: grid;
         grid-template-columns: 20% 80%;
     }
+
+    @media only screen and (max-width: 768px) {
+        .bottom-section {
+            display: flex;
+        }
+        .top-section {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 </style>
