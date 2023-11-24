@@ -18,7 +18,7 @@ function addPost() {
   
   document.getElementsByClassName('editable')[0].innerHTML = '';
   document.getElementsByClassName('placeholder')[0].style.display = "block";
-  images.value = [];
+  uploadedImages.value = [];
 }
 
 
@@ -45,12 +45,11 @@ const handleFileChange = (event) => {
             <div class="input-box">
               <div class="tweet-area">
                   <span class="placeholder">What's happening?</span>
-                  <div class="images-grid" v-if="uploadedImages?.lenght">
-
-                    <img v-for="img in uploadedImages" :src="img" alt="uploaded image">
-
+                  <div class="input editable" contenteditable="true" spellcheck="false">
                   </div>
-                  <div class="input editable" contenteditable="true" spellcheck="false"></div>
+                  <div class="images-box">
+                      <img v-for="img in uploadedImages" :src="img" alt="uploaded image">
+                  </div>
               </div>
             </div>
             <div class="bottom">
@@ -202,13 +201,14 @@ const handleFileChange = (event) => {
 .bottom button:hover{
     background: #0d8bd9;
 }
-.images-grid {
+.images-box {
   width: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.images-grid img {
-  width: 100px;
-  height: 100px;
+.images-box img {
+  width: 150px;
+  height: 150px;
 }
 </style>
