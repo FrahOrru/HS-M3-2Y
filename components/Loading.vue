@@ -21,7 +21,6 @@ let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
 let touchInput = false;
 
 onMounted(() => {
-    console.log(window)
     if(window) {
         STAR_COUNT = (window.innerWidth + window.innerHeight) / 8;
         canvas = document.querySelector("canvas")

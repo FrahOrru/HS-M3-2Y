@@ -1,24 +1,75 @@
+<script setup>
+import { usePostsStore } from '@/stores/posts'
+import { storeToRefs } from 'pinia'
+
+const store = usePostsStore();
+
+const { posts  } = storeToRefs(store);
+const { addPosts } = store;
+
+onMounted(() => {
+  document.getElementsByClassName('editable')[0].onfocus = ()=>{
+    document.getElementsByClassName('placeholder')[0].style.display = "none";
+  }
+})
+
+function addPost() {
+  addPosts({ content: document.getElementsByClassName('editable')[0].innerHTML, images: uploadedImages ? uploadedImages.value : null })
+  
+  document.getElementsByClassName('editable')[0].innerHTML = '';
+  document.getElementsByClassName('placeholder')[0].style.display = "block";
+}
+
+
+const fileInput = ref(null);
+const uploadedImages = ref([]);
+
+function changeProfilePic() {
+    if (fileInput.value) {
+        fileInput.value.click();
+    }
+}
+
+const handleFileChange = (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    uploadedImages.value.push(URL.createObjectURL(file));
+  }
+};
+
+</script>
 <template>
     <div class="input">
         <div class="wrapper">
             <div class="input-box">
-            <div class="tweet-area">
-                <span class="placeholder">What's happening?</span>
-                <div class="input editable" contenteditable="true" spellcheck="false"></div>
-                <div class="input readonly" contenteditable="true" spellcheck="false"></div>
-            </div>
+              <div class="tweet-area">
+                  <span class="placeholder">What's happening?</span>
+                  <div class="images-grid" v-if="uploadedImages?.lenght">
+
+                    <img v-for="img in uploadedImages" :src="img" alt="uploaded image">
+
+                  </div>
+                  <div class="input editable" contenteditable="true" spellcheck="false"></div>
+              </div>
             </div>
             <div class="bottom">
-            <ul class="icons">
-                <li>
-                    <img src="~/assets/img/image.svg" alt="upload image">
-                </li>
-            </ul>
-            <div class="content">
-                <button>
-                   Send
-                </button>
-            </div>
+              <ul class="icons">
+                  <li  @click="changeProfilePic">
+                      <img src="~/assets/img/image.svg" alt="upload image">
+                  </li>
+              </ul>
+              <input
+                ref="fileInput"
+                type="file"
+                accept="image/*"
+                style="display: none"
+                @change="handleFileChange"
+              />
+              <div class="content" @click="addPost">
+                  <button>
+                    Send
+                  </button>
+              </div>
             </div>
         </div>
     </div>
@@ -51,7 +102,7 @@
 .tweet-area::-webkit-scrollbar{
   width: 0px;
 }
-.tweet-area .placeholder{
+.tweet-area .placeholder {
   position: absolute;
   margin-top: 10px;
   margin-left: 18px;
@@ -149,5 +200,14 @@
 }
 .bottom button:hover{
     background: #0d8bd9;
+}
+.images-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.images-grid img {
+  width: 100px;
+  height: 100px;
 }
 </style>

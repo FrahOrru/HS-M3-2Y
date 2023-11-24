@@ -28,9 +28,12 @@
     align-items: center;
     gap: 2rem;
  }
- hr {
-    height: 1px;
-    color: 1px solid rgba(150, 150, 150, 0.40);
-    width: 90%;
+ .side-options-item:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.49);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
  }
 </style>

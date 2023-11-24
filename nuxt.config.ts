@@ -14,6 +14,7 @@ export default defineNuxtConfig({
       '@/assets/css/style.css',
   ],
   modules: [
+    '@pinia/nuxt',
     [
       '@nuxtjs/i18n',
       { 
@@ -36,4 +37,7 @@ export default defineNuxtConfig({
       }
     ]
   ],
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
 })
