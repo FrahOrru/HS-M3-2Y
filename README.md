@@ -9,7 +9,7 @@ points:
 
 10 - Render image grids of some data. (your projects, tweets, products)
 
-    the stucture of the is done with grid and the images when uploaded with flex
+    the stucture of the page is done with grid and the images when uploaded with flex
 
 10 - Form to be able to create new content or to for example send emails
 

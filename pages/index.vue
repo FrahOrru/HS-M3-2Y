@@ -8,6 +8,7 @@
 </script>
 <template>
     <div>
+        <Search></Search>
         <div class="top-section">
             <ProfileCard size="big"></ProfileCard>
             <PostInput></PostInput>
