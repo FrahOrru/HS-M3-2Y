@@ -45,7 +45,7 @@
         }
         
     }
-    @keyframes loaderAnimationEnd {
+    /* @keyframes loaderAnimationEnd {
         0%{
             width: 20px;
             height: 20px;
@@ -58,5 +58,5 @@
             height: 300vh;
             background-color: rgba(255, 255, 255, 1);
         }
-    }
+    } */
 </style>

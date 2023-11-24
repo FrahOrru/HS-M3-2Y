@@ -4,7 +4,7 @@ let loading = ref(true);
 onMounted(() => {
     setTimeout(() => {
         loading.value = false;
-    }, 5000)
+    }, 4000)
 })
 
 </script>

@@ -44,7 +44,7 @@ const handleFileChange = (event) => {
         <div class="wrapper">
             <div class="input-box">
               <div class="tweet-area">
-                  <span class="placeholder">What's happening?</span>
+                  <span class="placeholder">{{ $t('whatsHappening') }}</span>
                   <div class="input editable" contenteditable="true" spellcheck="false">
                   </div>
                   <div class="images-box">
@@ -206,6 +206,7 @@ const handleFileChange = (event) => {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 .images-box img {
   width: 150px;

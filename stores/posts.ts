@@ -22,6 +22,16 @@ export const usePostsStore = defineStore('posts', () => {
     return { imageUrl, changeImage}
   })
 
+  export const useColorStore = defineStore('color', () => {
+    const mode = ref('light')
+
+    function changeMode() {
+      mode.value = mode.value === 'light' ? 'dark' : 'light';
+    }
+  
+    return { mode, changeMode}
+  })
+
   interface Post {
     content: String,
     images?: []

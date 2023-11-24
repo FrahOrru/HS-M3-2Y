@@ -1,75 +1,32 @@
-# Nuxt 3 Minimal Starter
+this project it's a simple version of Twitter, when an user can enter and write some things
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+points:
 
-## Setup
+20 - Add interactive background
 
-Make sure to install the dependencies:
+    the starting loading is a canvas with an interactive background, at the movement of the mouse
+    the stars move too
 
-```bash
-# npm
-npm install
+10 - Render image grids of some data. (your projects, tweets, products)
 
-# pnpm
-pnpm install
+    the stucture of the is done with grid and the images when uploaded with flex
 
-# yarn
-yarn install
+10 - Form to be able to create new content or to for example send emails
 
-# bun
-bun install
-```
+    the bg input allows the user to type their thoughts and post them
 
-## Development Server
+5 - Micro animation
 
-Start the development server on `http://localhost:3000`:
+    in the loading there is an hand-made small animation to rapresent the loading
 
-```bash
-# npm
-npm run dev
+5 - Add language translation
 
-# pnpm
-pnpm run dev
+    on the top left of the header there is a language switch button that allows the user to switch from english to italian
 
-# yarn
-yarn dev
+5 - Deploy by Github Pages (or Vercel)
 
-# bun
-bun run dev
-```
+    the project is upload on vercel at this link: https://hs-m3-2-y.vercel.app/
 
-## Production
+5 - Button to change background color (dark and light) colour palette
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+    on the top right there is a button to switch color mode

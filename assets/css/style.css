@@ -7,3 +7,7 @@ hr {
   color: 1px solid rgba(150, 150, 150, 0.4);
   width: 90%;
 }
+.dark-mode {
+  background-color: black;
+  color: #fff !important;
+}
