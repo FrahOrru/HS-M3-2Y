@@ -21,15 +21,19 @@
         display: flex;
         flex-direction: column;
     }
-    .content p{
+    .content {
         padding: 1rem 6rem;
     }
+    
     .images {
-        display: grid;
-        grid-template-columns: 50% 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
     }
     .images img {
         width: 200px;
         height: 200px;
+        
     }
 </style>

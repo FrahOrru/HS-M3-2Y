@@ -2,12 +2,12 @@
     <div class="side-options">
         <div class="side-options-item notifications">
             <img src="~/assets/img/notification.png" alt="notification icon">
-            <p>Notifications</p>
+            <p>{{$t('notifications')}}</p>
         </div>
         <hr>
         <div class="side-options-item profile">
             <img src="~/assets/img/account.png" alt="profile icon">
-            <p>Profile</p>
+            <p>{{$t('profile')}}</p>
         </div>
     </div>
 </template>

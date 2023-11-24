@@ -18,6 +18,7 @@ function addPost() {
   
   document.getElementsByClassName('editable')[0].innerHTML = '';
   document.getElementsByClassName('placeholder')[0].style.display = "block";
+  images.value = [];
 }
 
 

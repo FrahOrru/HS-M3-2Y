@@ -1,5 +1,7 @@
 <template>
-    <div class="header"></div>
+    <div class="header">
+        <LanguageChange></LanguageChange>
+    </div>
 </template>
 <style scoped>
     .header {
